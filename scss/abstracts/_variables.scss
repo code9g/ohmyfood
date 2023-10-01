@@ -1,11 +1,15 @@
 $breakpoints: (
-  medium: (
-    min-width: 600px,
+  tablet: (
+    min-width: 768px,
   ),
-  large: (
-    min-width: 1024,
+  desktop: (
+    min-width: 1024px,
   ),
 );
 
-$font-title: "Shrikhand", cursive;
-$font-default: "Roboto", sans-serif;
+$font-family-title: "Shrikhand", cursive;
+$font-family-default: "Roboto", sans-serif;
+
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
