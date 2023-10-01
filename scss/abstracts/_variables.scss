@@ -1,1 +1,11 @@
-$breakpoints: ();
+$breakpoints: (
+  medium: (
+    min-width: 600px,
+  ),
+  large: (
+    min-width: 1024,
+  ),
+);
+
+$font-title: "Shrikhand", cursive;
+$font-default: "Roboto", sans-serif;
