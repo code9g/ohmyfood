@@ -35,6 +35,13 @@ a {
   padding: 20px;
 }
 
+.stretched-link {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .l-header {
   position: relative;
   background-color: #ffffff;
@@ -109,7 +116,7 @@ a {
   background-color: #ffffff;
 }
 .restaurants .favorite {
-  width: 4.2rem;
+  width: 2.2rem;
 }
 
 .l-footer {
@@ -137,8 +144,15 @@ a {
   padding: 13px 18px;
   text-align: center;
   color: #ffffff;
-  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-color: #9356dc;
+  box-shadow: 0 25px 50px 0px #ff79da inset;
   border-radius: 20px;
+  transition: all 500ms ease-in-out;
+}
+.btn-primary:hover {
+  opacity: 0.8;
+  background-color: #ff79da;
+  box-shadow: 0 25px 50px 0px #9356dc inset;
 }
 
 .badge-new {
@@ -171,20 +185,42 @@ a {
 .favorite .input-favorite {
   display: none;
 }
+.favorite .input-favorite:checked ~ .label-favorite .favorite-check {
+  opacity: 1;
+}
+.favorite .input-favorite:checked ~ .label-favorite .favorite-uncheck {
+  opacity: 0;
+}
 .favorite .favorite-check,
 .favorite .favorite-uncheck {
   position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 50%;
   right: 0;
+  width: 100%;
+  height: 100%;
   transform: translateY(-50%);
+  transition: opacity 500ms ease-in-out;
 }
 .favorite .favorite-check {
   opacity: 0;
-  color: #9356dc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.favorite .favorite-check:hover {
+  opacity: 1;
 }
 .favorite .favorite-uncheck {
   opacity: 1;
   color: #000000;
+}
+.favorite .favorite-uncheck:hover {
+  opacity: 0;
 }
 
 .cards {

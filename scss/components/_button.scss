@@ -4,10 +4,16 @@
   text-align: center;
 
   color: #ffffff;
-  background: linear-gradient(
-    193deg,
-    $primary-color -11.44%,
-    $secondary-color 123.93%
-  );
+  background-color: $primary-color;
+  box-shadow: 0 25px 50px -0px $secondary-color inset;
+
   border-radius: 20px;
+
+  transition: all 500ms ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+    background-color: $secondary-color;
+    box-shadow: 0 25px 50px -0px $primary-color inset;
+  }
 }
