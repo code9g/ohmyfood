@@ -1,0 +1,20 @@
+.l-footer {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  list-style: none;
+
+  .fa-solid {
+    width: 3rem;
+  }
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  padding-bottom: 16px;
+}
