@@ -1,0 +1,28 @@
+.restaurants {
+  background-color: $primary-bg-color;
+
+  .cards {
+    gap: 18px;
+  }
+
+  .card {
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  .card-img {
+    aspect-ratio: 3/2;
+    margin: -17% 0 0 0;
+  }
+
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+
+  .favorite {
+    width: 4.2rem;
+  }
+}

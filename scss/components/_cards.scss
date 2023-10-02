@@ -1,0 +1,17 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 25px;
+}
+
+.card {
+  position: relative;
+
+  border-radius: 20px;
+}
+
+.card-img {
+  width: 100%;
+  object-fit: cover;
+}

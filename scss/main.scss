@@ -11,10 +11,16 @@
 
 @import "layout/header";
 @import "layout/main";
+@import "layout/search";
+@import "layout/book";
+@import "layout/fonctioning";
+@import "layout/restaurants";
 @import "layout/footer";
 
 @import "components/button";
 @import "components/badge";
+@import "components/favorite";
+@import "components/cards";
 
 @import "pages/home";
 @import "pages/restaurant";

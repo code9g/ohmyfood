@@ -1,15 +1,13 @@
-.btn {
+.btn-primary {
   min-width: 186px;
   padding: 13px 18px;
   text-align: center;
-  border-radius: 20px;
-}
 
-.btn-primary {
+  color: #ffffff;
   background: linear-gradient(
     193deg,
     $primary-color -11.44%,
     $secondary-color 123.93%
   );
-  color: #ffffff;
+  border-radius: 20px;
 }

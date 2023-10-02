@@ -1,11 +1,27 @@
 .badge-new {
   position: absolute;
-  color: #008766;
+
   padding: 7px 9px;
   right: 15px;
   top: 15px;
+
   font-weight: 500;
   font-size: 1.4rem;
+  color: #008766;
   border-radius: 2px;
   background-color: $tertiary-color;
+}
+
+.badge-n {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.2rem;
+  height: 2.2rem;
+
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: $secondary-color;
+  border-radius: 50%;
 }

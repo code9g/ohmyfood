@@ -1,0 +1,25 @@
+.favorite {
+  position: relative;
+
+  .input-favorite {
+    display: none;
+  }
+
+  .favorite-check,
+  .favorite-uncheck {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  .favorite-check {
+    opacity: 0;
+    color: $primary-color;
+  }
+
+  .favorite-uncheck {
+    opacity: 1;
+    color: #000000;
+  }
+}

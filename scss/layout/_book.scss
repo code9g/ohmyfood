@@ -1,0 +1,17 @@
+.book {
+  background-color: $primary-bg-color;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 40px 20px;
+  }
+
+  h2,
+  p {
+    text-align: center;
+  }
+}
