@@ -6,6 +6,10 @@
 }
 
 .btn-primary {
-  background-color: $primary-color;
+  background: linear-gradient(
+    193deg,
+    $primary-color -11.44%,
+    $secondary-color 123.93%
+  );
   color: #ffffff;
 }

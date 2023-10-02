@@ -151,6 +151,18 @@ a {
   color: #000000;
 }
 
+.badge-new {
+  position: absolute;
+  color: #008766;
+  padding: 7px 9px;
+  right: 15px;
+  top: 15px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  background-color: #99e2d0;
+}
+
 .l-header {
   position: relative;
   background-color: #ffffff;
@@ -185,6 +197,18 @@ a {
 }
 
 .btn-primary {
-  background-color: #9356dc;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   color: #ffffff;
+}
+
+.badge-new {
+  position: absolute;
+  color: #008766;
+  padding: 7px 9px;
+  right: 15px;
+  top: 15px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  background-color: #99e2d0;
 }
