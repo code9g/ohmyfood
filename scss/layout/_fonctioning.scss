@@ -1,18 +1,31 @@
 .fonctioning {
   .container {
-    padding: 40px 20px;
+    padding: 50px 20px 66px 20px;
   }
 
   .cards {
-    gap: 25px;
-    padding-left: 1.1rem;
+    column-gap: 36px;
+    row-gap: 25px;
+
+    padding-left: 12px;
   }
 
   .card {
+    flex: auto;
+
     padding: 28px 35px;
+
     background-color: $primary-bg-color;
     border-radius: 20px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .cards:last-child .fa-solid {
+    color: $primary-color;
+  }
+
+  .fa-solid {
+    width: 2.5rem;
   }
 
   .badge-n {

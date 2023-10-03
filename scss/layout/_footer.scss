@@ -1,12 +1,29 @@
 .l-footer {
   color: #ffffff;
   background-color: #000000;
+
+  .container {
+    @include respond-to("desktop") {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      gap: 30px;
+
+      padding: 30px 25px;
+    }
+  }
 }
 
 .footer-menu {
   display: flex;
   flex-direction: column;
   gap: 7px;
+
+  @include respond-to("desktop") {
+    flex-direction: row;
+    gap: 30px;
+  }
+
   list-style: none;
 
   .fa-solid {
@@ -17,4 +34,8 @@
 .footer-title {
   font-size: 1.8rem;
   padding-bottom: 16px;
+
+  @include respond-to("desktop") {
+    padding-bottom: 8px;
+  }
 }
