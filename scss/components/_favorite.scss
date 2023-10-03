@@ -1,8 +1,9 @@
 .favorite {
   position: relative;
 
-  font-size: 2.2rem;
-  width: 2.2rem;
+  font-size: $icon-size;
+  width: $icon-size;
+  height: $icon-size;
 
   .favorite-check,
   .favorite-uncheck {
@@ -14,9 +15,10 @@
     align-items: center;
     justify-content: center;
 
-    right: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
-    transform: translateY(-50%);
     transition: opacity 0.6s ease-in-out;
   }
 

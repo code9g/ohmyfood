@@ -75,7 +75,7 @@
 
     animation-name: dishAppear;
     animation-duration: 0.6s;
-    animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+    animation-timing-function: cubic-bezier(0.5, 1.6, 0.34, 0.8);
     animation-fill-mode: both;
 
     transform: scale(0);
@@ -121,24 +121,15 @@
 
     margin-right: -70px;
 
-    transition: margin-right 0.4s ease-in-out;
+    transition: margin-right 0.6s ease-in-out;
 
     color: #ffffff;
-    font-size: 2.2rem;
+    font-size: $icon-size;
 
     background-color: $tertiary-color;
   }
 
   .restaurant-order {
     text-align: center;
-  }
-}
-
-@keyframes dishAppear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
   }
 }
