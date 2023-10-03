@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .title,
 .brand {
   font-family: $font-family-title;
@@ -13,11 +15,27 @@
   max-width: 1120px;
 }
 
-.xstretched-link {
+// Permet de rendre le lien cliquable sur toute la "carte"
+.stretched-link {
   position: absolute;
 
   display: block;
 
   width: 100%;
   height: 100%;
+}
+
+// Lien pour le retour à la page d'accueil
+.back-link {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Durée des animations pour l'affichage des plats de la carte des menus
+@for $i from 0 to 9 {
+  .delay-#{$i} {
+    animation-delay: #{math.div($i, 10)}s;
+  }
 }

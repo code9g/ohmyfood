@@ -4,21 +4,6 @@
   font-size: 2.2rem;
   width: 2.2rem;
 
-  .input-favorite {
-    display: none;
-
-    &:checked {
-      ~ .label-favorite {
-        .favorite-check {
-          opacity: 1;
-        }
-        .favorite-uncheck {
-          opacity: 0;
-        }
-      }
-    }
-  }
-
   .favorite-check,
   .favorite-uncheck {
     position: absolute;
@@ -31,7 +16,8 @@
 
     right: 0;
 
-    transition: opacity 500ms ease-in-out;
+    transform: translateY(-50%);
+    transition: opacity 0.6s ease-in-out;
   }
 
   .favorite-check {
@@ -60,14 +46,4 @@
       opacity: 0;
     }
   }
-
-  // &:hover {
-  //   .favorite-check {
-  //     opacity: 1;
-  //   }
-
-  //   .favorite-uncheck {
-  //     opacity: 0;
-  //   }
-  // }
 }
