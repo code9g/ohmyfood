@@ -1,6 +1,22 @@
 .l-footer {
   color: #ffffff;
   background-color: #000000;
+<<<<<<< Updated upstream
+=======
+
+  .container {
+    padding: 20px;
+
+    @include respond-to("desktop") {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      gap: 30px;
+
+      padding: 30px 25px;
+    }
+  }
+>>>>>>> Stashed changes
 }
 
 .footer-menu {
