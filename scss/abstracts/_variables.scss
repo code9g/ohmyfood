@@ -22,5 +22,8 @@ $icon-size: 2.2rem;
 /***
     Paramètres du loader
 ***/
-$loader-interval: 0.8s;
-$loader-duration: 3s;
+$loader-duration: 3s; // Durée d'affichage du loader
+$loader-interval: 2s; // Intervalle entre les animations
+$loader-amount: 6; // Nombre de points
+$loader-radius: 4vmin; // Rayon
+$loader-colors: ($primary-color, $secondary-color, $tertiary-color);

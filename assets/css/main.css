@@ -17,6 +17,7 @@ html {
 }
 
 body {
+  position: relative;
   font-size: 1.6rem;
   width: 100%;
 }
@@ -96,80 +97,6 @@ h1 {
   }
   100% {
     opacity: 0;
-  }
-}
-body {
-  position: relative;
-}
-
-.loader {
-  position: absolute;
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(255, 255, 255, 0.8);
-  animation: loader-finish 0.01s;
-  animation-delay: 3s;
-  animation-fill-mode: both;
-}
-.loader-dot {
-  width: 20px;
-  height: 20px;
-  background: radial-gradient(#ff79da 0%, #9356dc 100%);
-  border-radius: 50%;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
-}
-.loader-dot:not(:last-child) {
-  animation: loader-animate 0.8s linear infinite;
-}
-.loader-dot:last-child {
-  animation: jump-animate 0.8s ease-in-out infinite;
-}
-
-@keyframes loader-animate {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(30px);
-  }
-}
-@keyframes jump-animate {
-  0% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(10px, -10px);
-  }
-  20% {
-    transform: translate(20px, 10px);
-  }
-  30% {
-    transform: translate(30px, -50px);
-  }
-  70% {
-    transform: translate(-150px, -50px);
-  }
-  80% {
-    transform: translate(-140px, 10px);
-  }
-  90% {
-    transform: translate(-130px, -10px);
-  }
-  100% {
-    transform: translate(-120px, 0);
-  }
-}
-@keyframes loader-finish {
-  100% {
-    opacity: 0;
-    z-index: -99;
   }
 }
 .l-header {
@@ -528,4 +455,80 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.loader {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  animation: loader-finish 100ms linear 3s both;
+}
+.loader .dot {
+  position: absolute;
+  width: 8vmin;
+  height: 8vmin;
+  top: calc(50vh - 4vmin);
+  left: 50vw;
+  border-radius: 4vmin;
+  border: 1px solid #eaeaea;
+  backface-visibility: hidden;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  animation-name: dot-move;
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 0.8);
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  transform-origin: -4vmin center;
+}
+.loader .dot:nth-child(1) {
+  background: #99e2d0;
+  animation-delay: -0.3333333333s;
+  opacity: 0;
+}
+.loader .dot:nth-child(2) {
+  background: #9356dc;
+  animation-delay: -0.6666666667s;
+  opacity: 0;
+}
+.loader .dot:nth-child(3) {
+  background: #ff79da;
+  animation-delay: -1s;
+  opacity: 0;
+}
+.loader .dot:nth-child(4) {
+  background: #9356dc;
+  animation-delay: -1.3333333333s;
+  opacity: 0;
+}
+.loader .dot:nth-child(5) {
+  background: #9356dc;
+  animation-delay: -1.6666666667s;
+  opacity: 0;
+}
+.loader .dot:nth-child(6) {
+  background: #99e2d0;
+  animation-delay: -2s;
+  opacity: 0;
+}
+
+@keyframes loader-finish {
+  100% {
+    opacity: 0;
+    z-index: -99;
+  }
+}
+@keyframes dot-move {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 10;
+    transform: scale(0) rotate(360deg);
+  }
 }
