@@ -1,3 +1,7 @@
+@charset "UTF-8";
+/***
+    Paramètres du loader
+***/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 *,
 ::before,
@@ -56,48 +60,116 @@ h1 {
   transform: translateY(-50%);
 }
 
+.appear-animate {
+  opacity: 0;
+  animation-name: appear-animation;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
 .delay-0 {
   animation-delay: 0s;
 }
 
 .delay-1 {
-  animation-delay: 0.1s;
-}
-
-.delay-2 {
-  animation-delay: 0.2s;
-}
-
-.delay-3 {
   animation-delay: 0.3s;
 }
 
-.delay-4 {
-  animation-delay: 0.4s;
-}
-
-.delay-5 {
-  animation-delay: 0.5s;
-}
-
-.delay-6 {
+.delay-2 {
   animation-delay: 0.6s;
 }
 
-.delay-7 {
-  animation-delay: 0.7s;
-}
-
-.delay-8 {
-  animation-delay: 0.8s;
-}
-
-@keyframes dishAppear {
+@keyframes appear-animation {
   0% {
-    transform: scale(0);
+    opacity: 0;
+    transform: translateY(100%);
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes loader-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body {
+  position: relative;
+}
+
+.loader {
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  animation: loader-finish 0.01s;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+}
+.loader-dot {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(#ff79da 0%, #9356dc 100%);
+  border-radius: 50%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
+}
+.loader-dot:not(:last-child) {
+  animation: loader-animate 0.8s linear infinite;
+}
+.loader-dot:last-child {
+  animation: jump-animate 0.8s ease-in-out infinite;
+}
+
+@keyframes loader-animate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+@keyframes jump-animate {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(10px, -10px);
+  }
+  20% {
+    transform: translate(20px, 10px);
+  }
+  30% {
+    transform: translate(30px, -50px);
+  }
+  70% {
+    transform: translate(-150px, -50px);
+  }
+  80% {
+    transform: translate(-140px, 10px);
+  }
+  90% {
+    transform: translate(-130px, -10px);
+  }
+  100% {
+    transform: translate(-120px, 0);
+  }
+}
+@keyframes loader-finish {
+  100% {
+    opacity: 0;
+    z-index: -99;
   }
 }
 .l-header {
@@ -188,6 +260,7 @@ h1 {
   padding: 32px 13px 40px 13px;
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
+  overflow: hidden;
 }
 .restaurant .restaurant-name {
   display: flex;
@@ -195,7 +268,7 @@ h1 {
   align-items: center;
   gap: 24px;
 }
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .restaurant .restaurant-name {
     justify-content: center;
   }
@@ -231,11 +304,6 @@ h1 {
   background-color: #ffffff;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  animation-name: dishAppear;
-  animation-duration: 0.6s;
-  animation-timing-function: cubic-bezier(0.5, 1.6, 0.34, 0.8);
-  animation-fill-mode: both;
-  transform: scale(0);
 }
 .restaurant .card:hover .menu-check {
   margin-right: 0;
@@ -285,26 +353,22 @@ h1 {
   justify-content: space-between;
   gap: 18px;
 }
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .restaurants .cards {
     gap: 50px;
   }
 }
 .restaurants .card {
   overflow: hidden;
+  max-width: 490px;
   background-color: #ffffff;
   border-radius: 15px;
-}
-@media screen and (min-width: 1100px) {
-  .restaurants .card {
-    max-width: 490px;
-  }
 }
 .restaurants .card-img {
   aspect-ratio: 3/2;
   margin: -17% 0 0 0;
 }
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .restaurants .card-img {
     aspect-ratio: 4/2;
   }
@@ -322,7 +386,7 @@ h1 {
 .l-footer .container {
   padding: 22px 25px;
 }
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .l-footer .container {
     display: flex;
     flex-direction: row-reverse;
@@ -338,7 +402,7 @@ h1 {
   gap: 7px;
   list-style: none;
 }
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .footer-menu {
     flex-direction: row;
     gap: 30px;
@@ -353,27 +417,40 @@ h1 {
   font-size: 1.8rem;
   padding-bottom: 16px;
 }
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .footer-title {
     padding-bottom: 8px;
   }
 }
 
 .btn-primary {
+  position: relative;
+  z-index: 1;
   display: inline-block;
   padding: 13px 18px;
   text-align: center;
   min-width: 186px;
-  color: #ffffff;
-  background-color: #9356dc;
-  box-shadow: 0 25px 50px 0px #ff79da inset;
   border-radius: 20px;
-  transition: background-color 0.6s ease;
+  color: #ffffff;
+  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.btn-primary:hover {
-  opacity: 0.8;
-  background-color: #ff79da;
-  box-shadow: 0 25px 50px 0px #9356dc inset;
+.btn-primary::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 20px;
+  background: linear-gradient(0deg, #a16be0 0%, #ff93e1 100%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transition: opacity 500ms ease-in-out;
+}
+.btn-primary:hover::after {
+  opacity: 1;
 }
 
 .badge-new {

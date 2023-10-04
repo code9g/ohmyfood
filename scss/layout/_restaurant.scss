@@ -32,6 +32,8 @@
 
     background-color: $primary-bg-color;
     border-radius: 40px 40px 0 0;
+
+    overflow: hidden;
   }
 
   .restaurant-name {
@@ -86,12 +88,8 @@
     box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 
-    animation-name: dishAppear;
-    animation-duration: 0.6s;
-    animation-timing-function: cubic-bezier(0.5, 1.6, 0.34, 0.8);
-    animation-fill-mode: both;
-
-    transform: scale(0);
+    //opacity: 0;
+    //transform: scale(0) rotation(180deg);
 
     &:hover .menu-check {
       margin-right: 0;

@@ -1,8 +1,34 @@
-@keyframes dishAppear {
+.appear-animate {
+  opacity: 0;
+
+  animation-name: appear-animation;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@for $i from 0 through 2 {
+  .delay-#{$i} {
+    animation-delay: #{$i * 0.3}s;
+  }
+}
+
+@keyframes appear-animation {
   0% {
-    transform: scale(0);
+    opacity: 0;
+    transform: translateY(100%);
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loader-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

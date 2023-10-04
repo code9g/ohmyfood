@@ -2,7 +2,7 @@
 /// @access public
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
-@mixin respond-to($breakpoint) {
+@mixin respond-to($breakpoint, $type: "screen") {
   $raw-query: map-get($breakpoints, $breakpoint);
 
   @if $raw-query {
@@ -12,7 +12,7 @@
       inspect($raw-query)
     );
 
-    @media #{$query} {
+    @media #{$type} and #{$query} {
       @content;
     }
   } @else {

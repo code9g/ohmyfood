@@ -33,10 +33,3 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
-// Durée des animations pour l'affichage des plats de la carte des menus
-@for $i from 0 to 9 {
-  .delay-#{$i} {
-    animation-delay: #{math.div($i, 10)}s;
-  }
-}
