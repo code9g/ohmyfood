@@ -49,7 +49,7 @@ body {
   }
 
   100% {
-    transform: translateX($loader-dot-size + $loader-dot-space);
+    transform: translateX(30px);
   }
 }
 

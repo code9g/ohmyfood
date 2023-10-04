@@ -115,7 +115,7 @@ body {
   left: 0;
   background: rgba(255, 255, 255, 0.8);
   animation: loader-finish 0.01s;
-  animation-delay: 5s;
+  animation-delay: 3s;
   animation-fill-mode: both;
 }
 .loader-dot {
