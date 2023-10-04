@@ -5,6 +5,9 @@
     position: relative;
     z-index: 1;
 
+    aspect-ratio: 375/275;
+
+    max-height: 375px;
     width: 100%;
 
     object-fit: cover;
@@ -21,9 +24,11 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    align-items: center;
 
+    max-width: 1055px;
+    margin: -40px auto 0;
     padding: 32px 13px 40px 13px;
-    margin-top: -15%;
 
     background-color: $primary-bg-color;
     border-radius: 40px 40px 0 0;
@@ -33,9 +38,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
+
+    @include respond-to("desktop") {
+      justify-content: center;
+    }
   }
 
   .restaurant-section {
+    width: 100%;
+    max-width: 634px;
+
     &-title {
       position: relative;
 

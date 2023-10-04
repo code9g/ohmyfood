@@ -37,9 +37,9 @@ h1 {
 }
 
 .container {
-  padding: 20px;
+  position: relative;
   margin: auto;
-  max-width: 1120px;
+  max-width: 1440px;
 }
 
 .stretched-link {
@@ -94,10 +94,10 @@ h1 {
 
 @keyframes dishAppear {
   0% {
-    transform: rotate(0deg) scale(0);
+    transform: scale(0);
   }
   100% {
-    transform: rotate(360deg) scale(1);
+    transform: scale(1);
   }
 }
 .l-header {
@@ -108,14 +108,14 @@ h1 {
 }
 
 .search {
+  padding: 15px 0;
   background-color: #eaeaea;
-  text-align: center;
 }
 .search .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 17px;
 }
 
 .book {
@@ -136,6 +136,7 @@ h1 {
 
 .fonctioning .container {
   padding: 50px 20px 66px 20px;
+  max-width: 1080px;
 }
 .fonctioning .cards {
   -moz-column-gap: 36px;
@@ -166,6 +167,8 @@ h1 {
 .restaurant .restaurant-img {
   position: relative;
   z-index: 1;
+  aspect-ratio: 375/275;
+  max-height: 375px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -179,8 +182,10 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  align-items: center;
+  max-width: 1055px;
+  margin: -40px auto 0;
   padding: 32px 13px 40px 13px;
-  margin-top: -15%;
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
 }
@@ -188,6 +193,16 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
+}
+@media (min-width: 1024px) {
+  .restaurant .restaurant-name {
+    justify-content: center;
+  }
+}
+.restaurant .restaurant-section {
+  width: 100%;
+  max-width: 634px;
 }
 .restaurant .restaurant-section-title {
   position: relative;
@@ -264,6 +279,7 @@ h1 {
 }
 .restaurants .container {
   padding: 50px 20px 66px 20px;
+  max-width: 1080px;
 }
 .restaurants .cards {
   justify-content: space-between;
@@ -301,7 +317,10 @@ h1 {
 
 .l-footer {
   color: #ffffff;
-  background-color: #000000;
+  background-color: #353535;
+}
+.l-footer .container {
+  padding: 22px 25px;
 }
 @media (min-width: 1024px) {
   .l-footer .container {
@@ -323,6 +342,7 @@ h1 {
   .footer-menu {
     flex-direction: row;
     gap: 30px;
+    padding-top: 30px;
   }
 }
 .footer-menu .fa-solid {

@@ -1,8 +1,10 @@
 .l-footer {
   color: #ffffff;
-  background-color: #000000;
+  background-color: #353535;
 
   .container {
+    padding: 22px 25px;
+
     @include respond-to("desktop") {
       display: flex;
       flex-direction: row-reverse;
@@ -22,6 +24,7 @@
   @include respond-to("desktop") {
     flex-direction: row;
     gap: 30px;
+    padding-top: 30px;
   }
 
   list-style: none;

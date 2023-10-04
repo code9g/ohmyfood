@@ -1,11 +1,11 @@
 .search {
+  padding: 15px 0;
   background-color: $secondary-bg-color;
-  text-align: center;
 
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 17px;
   }
 }
