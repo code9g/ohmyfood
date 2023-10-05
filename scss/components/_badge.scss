@@ -1,6 +1,8 @@
 .badge-new {
   position: absolute;
 
+  user-select: none;
+
   padding: 7px 9px;
   right: 15px;
   top: 15px;
@@ -16,6 +18,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  user-select: none;
 
   width: 2.2rem;
   height: 2.2rem;

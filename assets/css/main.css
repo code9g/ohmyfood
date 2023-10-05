@@ -398,6 +398,9 @@ h1 {
 
 .badge-new {
   position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   padding: 7px 9px;
   right: 15px;
   top: 15px;
@@ -412,6 +415,9 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   width: 2.2rem;
   height: 2.2rem;
   font-size: 1.2rem;
@@ -503,7 +509,7 @@ h1 {
   transform-origin: -4vmin center;
 }
 .loader .dot:nth-child(1) {
-  background: #99e2d0;
+  background: #9356dc;
   animation-delay: -0.3333333333s;
   opacity: 0;
 }
@@ -518,7 +524,7 @@ h1 {
   opacity: 0;
 }
 .loader .dot:nth-child(4) {
-  background: #99e2d0;
+  background: #ff79da;
   animation-delay: -1.3333333333s;
   opacity: 0;
 }
