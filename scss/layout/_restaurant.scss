@@ -79,17 +79,15 @@
 
   .card {
     display: flex;
+
     max-width: 100%;
     cursor: pointer;
+    overflow: hidden;
 
     padding: 0;
     border-radius: 15px;
     background-color: #ffffff;
-    box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-
-    //opacity: 0;
-    //transform: scale(0) rotation(180deg);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 
     &:hover .menu-check {
       margin-right: 0;
@@ -124,15 +122,19 @@
   }
 
   .menu-check {
+    $width: 2.5 * $icon-size;
+
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 70px;
+    width: $width;
 
-    margin-right: -70px;
+    margin-right: -$width;
 
-    transition: margin-right 0.6s ease-in-out;
+    transition: margin-right $check-duration ease-in-out;
 
     color: #ffffff;
     font-size: $icon-size;

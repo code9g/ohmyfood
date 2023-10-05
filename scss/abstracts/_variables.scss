@@ -23,7 +23,23 @@ $icon-size: 2.2rem;
     Paramètres du loader
 ***/
 $loader-duration: 3s; // Durée d'affichage du loader
-$loader-interval: 2s; // Intervalle entre les animations
+$loader-interval: 2s; // Intervalle entre chaque cycle d'animation
 $loader-amount: 6; // Nombre de points
 $loader-radius: 4vmin; // Rayon
 $loader-colors: ($primary-color, $secondary-color, $tertiary-color);
+
+/***
+    Paramètres de l'apparition des menus
+***/
+$appear-duration: 0.3s; // Durée de l'animation
+$appear-delay: 0.3s; // Décalage entre chaque animation
+
+/***
+    Paramètres de l'animation de confirmation du choix de menu
+***/
+$check-duration: 0.3s; // Durée de l'animation
+
+/***
+    Paramètres de l'animation des favoris
+***/
+$favorite-duration: 0.3s; // Durée de l'animation

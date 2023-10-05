@@ -2,6 +2,15 @@
 /***
     Paramètres du loader
 ***/
+/***
+    Paramètres de l'apparition des menus
+***/
+/***
+    Paramètres de l'animation de confirmation du choix de menu
+***/
+/***
+    Paramètres de l'animation des favoris
+***/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 *,
 ::before,
@@ -56,6 +65,7 @@ h1 {
 
 .back-link {
   position: absolute;
+  font-size: 2.2rem;
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
@@ -64,7 +74,7 @@ h1 {
 .appear-animate {
   opacity: 0;
   animation-name: appear-animation;
-  animation-duration: 0.6s;
+  animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
@@ -82,21 +92,13 @@ h1 {
 }
 
 @keyframes appear-animation {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(100%);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@keyframes loader-animation {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 .l-header {
@@ -150,10 +152,8 @@ h1 {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-.fonctioning .cards:last-child .fa-solid {
-  color: #9356dc;
-}
-.fonctioning .fa-solid {
+.fonctioning .card .icon-text {
+  color: #7e7e7e;
   width: 2.5rem;
 }
 .fonctioning .badge-n {
@@ -226,11 +226,11 @@ h1 {
   display: flex;
   max-width: 100%;
   cursor: pointer;
+  overflow: hidden;
   padding: 0;
   border-radius: 15px;
   background-color: #ffffff;
-  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .restaurant .card:hover .menu-check {
   margin-right: 0;
@@ -255,12 +255,13 @@ h1 {
   font-weight: 700;
 }
 .restaurant .menu-check {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  margin-right: -70px;
-  transition: margin-right 0.6s ease-in-out;
+  width: 5.5rem;
+  margin-right: -5.5rem;
+  transition: margin-right 0.3s ease-in-out;
   color: #ffffff;
   font-size: 2.2rem;
   background-color: #99e2d0;
@@ -420,7 +421,7 @@ h1 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .favorite .favorite-check {
   opacity: 0;
@@ -459,13 +460,16 @@ h1 {
 
 .loader {
   position: absolute;
-  z-index: 99;
+  z-index: -99;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  opacity: 0;
   background: rgba(255, 255, 255, 0.9);
-  animation: loader-finish 100ms linear 3s both;
+  animation-name: loader-finish;
+  animation-duration: 3s;
+  animation-delay: 150ms;
 }
 .loader .dot {
   position: absolute;
@@ -489,12 +493,12 @@ h1 {
   opacity: 0;
 }
 .loader .dot:nth-child(2) {
-  background: #9356dc;
+  background: #ff79da;
   animation-delay: -0.6666666667s;
   opacity: 0;
 }
 .loader .dot:nth-child(3) {
-  background: #ff79da;
+  background: #99e2d0;
   animation-delay: -1s;
   opacity: 0;
 }
@@ -504,7 +508,7 @@ h1 {
   opacity: 0;
 }
 .loader .dot:nth-child(5) {
-  background: #9356dc;
+  background: #ff79da;
   animation-delay: -1.6666666667s;
   opacity: 0;
 }
@@ -515,9 +519,13 @@ h1 {
 }
 
 @keyframes loader-finish {
-  100% {
-    opacity: 0;
-    z-index: -99;
+  from {
+    z-index: 99;
+    opacity: 1;
+  }
+  to {
+    z-index: 99;
+    opacity: 1;
   }
 }
 @keyframes dot-move {
@@ -528,7 +536,7 @@ h1 {
     opacity: 1;
   }
   100% {
-    z-index: 10;
+    z-index: 1;
     transform: scale(0) rotate(360deg);
   }
 }

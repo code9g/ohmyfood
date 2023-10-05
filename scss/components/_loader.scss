@@ -2,16 +2,19 @@
 
 .loader {
   position: absolute;
-  z-index: 99;
+  z-index: -99;
 
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 
+  opacity: 0;
   background: rgba(255, 255, 255, 0.9);
 
-  animation: loader-finish 100ms linear $loader-duration both;
+  animation-name: loader-finish;
+  animation-duration: $loader-duration;
+  animation-delay: 150ms;
 
   .dot {
     position: absolute;
@@ -44,9 +47,13 @@
 }
 
 @keyframes loader-finish {
-  100% {
-    opacity: 0;
-    z-index: -99;
+  from {
+    z-index: 99;
+    opacity: 1;
+  }
+  to {
+    z-index: 99;
+    opacity: 1;
   }
 }
 
@@ -58,7 +65,7 @@
     opacity: 1;
   }
   100% {
-    z-index: 10;
+    z-index: 1;
     transform: scale(0) rotate(360deg);
   }
 }
