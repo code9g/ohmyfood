@@ -63,12 +63,9 @@ h1 {
   height: 100%;
 }
 
-.back-link {
-  position: absolute;
-  font-size: 2.2rem;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
+.icon-text {
+  color: #7e7e7e;
+  font-size: 1em;
 }
 
 .appear-animate {
@@ -153,8 +150,7 @@ h1 {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .fonctioning .card .icon-text {
-  color: #7e7e7e;
-  width: 2.5rem;
+  width: 2em;
 }
 .fonctioning .badge-n {
   position: absolute;
@@ -351,6 +347,14 @@ h1 {
   }
 }
 
+.back-link {
+  position: absolute;
+  font-size: 2.2rem;
+  left: 0;
+  top: 50%;
+  transform: translate(100%, -50%);
+}
+
 .btn-primary {
   position: relative;
   z-index: 1;
@@ -493,7 +497,7 @@ h1 {
   opacity: 0;
 }
 .loader .dot:nth-child(2) {
-  background: #ff79da;
+  background: #99e2d0;
   animation-delay: -0.6666666667s;
   opacity: 0;
 }
@@ -503,12 +507,12 @@ h1 {
   opacity: 0;
 }
 .loader .dot:nth-child(4) {
-  background: #9356dc;
+  background: #ff79da;
   animation-delay: -1.3333333333s;
   opacity: 0;
 }
 .loader .dot:nth-child(5) {
-  background: #ff79da;
+  background: #9356dc;
   animation-delay: -1.6666666667s;
   opacity: 0;
 }

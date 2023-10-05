@@ -26,11 +26,7 @@
   height: 100%;
 }
 
-// Lien pour le retour à la page d'accueil
-.back-link {
-  position: absolute;
-  font-size: $icon-size;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
+.icon-text {
+  color: $icon-text-color;
+  font-size: $icon-text-size;
 }
