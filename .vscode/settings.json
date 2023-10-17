@@ -4,13 +4,15 @@
       "format": "expanded",
       "extensionName": ".css",
       "savePath": "/assets/css",
-      "savePathReplacementPairs": null
+      "savePathReplacementPairs": null,
+      "generateMap": true
     },
     {
       "format": "compressed",
       "extensionName": ".min.css",
       "savePath": "/assets/css",
-      "savePathReplacementPairs": null
+      "savePathReplacementPairs": null,
+      "generateMap": true
     }
   ]
 }

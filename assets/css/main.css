@@ -68,26 +68,6 @@ h1 {
   font-size: 1em;
 }
 
-.appear-animate {
-  opacity: 0;
-  animation-name: appear-animation;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
-}
-
-.delay-0 {
-  animation-delay: 0s;
-}
-
-.delay-1 {
-  animation-delay: 0.3s;
-}
-
-.delay-2 {
-  animation-delay: 0.6s;
-}
-
 @keyframes appear-animation {
   from {
     opacity: 0;
@@ -96,6 +76,36 @@ h1 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+/***
+* Animation du loader
+***/
+@keyframes loader-finish {
+  0% {
+    z-index: 99;
+  }
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    z-index: 99;
+    opacity: 1;
+  }
+  100% {
+    z-index: -99;
+  }
+}
+@keyframes dot-move {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 1;
+    transform: scale(0) rotate(360deg);
   }
 }
 .l-header {
@@ -213,6 +223,22 @@ h1 {
   left: 0;
   bottom: 0;
   background-color: #99e2d0;
+}
+.restaurant .appear-animate {
+  opacity: 0;
+  animation-name: appear-animation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+.restaurant .delay-0 {
+  animation-delay: 0s;
+}
+.restaurant .delay-1 {
+  animation-delay: 0.3s;
+}
+.restaurant .delay-2 {
+  animation-delay: 0.6s;
 }
 .restaurant .cards {
   flex-direction: column;
@@ -388,9 +414,9 @@ h1 {
   left: 0;
   opacity: 0;
   border-radius: 20px;
-  background: linear-gradient(0deg, #a16be0 0%, #ff93e1 100%);
+  background: linear-gradient(0deg, #9b63df 0%, #ff88de 100%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .btn-primary:hover::after {
   opacity: 1;
@@ -488,9 +514,7 @@ h1 {
   left: 0;
   opacity: 0;
   background: rgba(255, 255, 255, 0.9);
-  animation-name: loader-finish;
-  animation-duration: 3s;
-  animation-delay: 150ms;
+  animation: loader-finish 3s ease-in-out 150ms both;
 }
 .loader .dot {
   position: absolute;
@@ -502,62 +526,36 @@ h1 {
   border: 1px solid #eaeaea;
   backface-visibility: hidden;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  animation-name: dot-move;
-  animation-timing-function: cubic-bezier(0.4, 0, 1, 0.8);
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
+  animation: dot-move 2s cubic-bezier(0.4, 0, 1, 0.8) infinite;
   transform-origin: -4vmin center;
 }
-.loader .dot:nth-child(1) {
-  background: #9356dc;
+.loader .dot-1 {
+  background: #ff79da;
   animation-delay: -0.3333333333s;
   opacity: 0;
 }
-.loader .dot:nth-child(2) {
-  background: #9356dc;
+.loader .dot-2 {
+  background: #99e2d0;
   animation-delay: -0.6666666667s;
   opacity: 0;
 }
-.loader .dot:nth-child(3) {
-  background: #99e2d0;
+.loader .dot-3 {
+  background: #9356dc;
   animation-delay: -1s;
   opacity: 0;
 }
-.loader .dot:nth-child(4) {
+.loader .dot-4 {
   background: #ff79da;
   animation-delay: -1.3333333333s;
   opacity: 0;
 }
-.loader .dot:nth-child(5) {
-  background: #ff79da;
+.loader .dot-5 {
+  background: #99e2d0;
   animation-delay: -1.6666666667s;
   opacity: 0;
 }
-.loader .dot:nth-child(6) {
-  background: #99e2d0;
+.loader .dot-6 {
+  background: #9356dc;
   animation-delay: -2s;
   opacity: 0;
-}
-
-@keyframes loader-finish {
-  from {
-    z-index: 99;
-    opacity: 1;
-  }
-  to {
-    z-index: 99;
-    opacity: 1;
-  }
-}
-@keyframes dot-move {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    z-index: 1;
-    transform: scale(0) rotate(360deg);
-  }
-}
+}/*# sourceMappingURL=main.css.map */

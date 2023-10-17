@@ -72,6 +72,21 @@
     }
   }
 
+  .appear-animate {
+    opacity: 0;
+
+    animation-name: appear-animation;
+    animation-duration: $appear-duration;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+  }
+
+  @for $i from 0 through 2 {
+    .delay-#{$i} {
+      animation-delay: $i * $appear-delay;
+    }
+  }
+
   .cards {
     flex-direction: column;
     gap: 12px;

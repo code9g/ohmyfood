@@ -22,14 +22,18 @@ $icon-size: 2.2rem;
 $icon-text-color: #7e7e7e;
 $icon-text-size: 1em;
 
+$button-ligthness: 3%; // Eclaircisement du bouton lors du survol
+$button-transition-duration: 0.3s;
+
 /***
     Paramètres du loader
 ***/
+$loader-delay: 150ms; // Délai de lancement de l'animation
 $loader-duration: 3s; // Durée d'affichage du loader
-$loader-interval: 2s; // Intervalle entre chaque cycle d'animation
+$loader-interval: 2s; // Intervalle entre chaque cycle d'animation des points
 $loader-amount: 6; // Nombre de points
 $loader-radius: 4vmin; // Rayon
-$loader-colors: ($primary-color, $secondary-color, $tertiary-color);
+$loader-colors: $primary-color, $secondary-color, $tertiary-color;
 
 /***
     Paramètres de l'apparition des menus

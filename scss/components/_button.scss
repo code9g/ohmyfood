@@ -33,12 +33,12 @@
 
     background: linear-gradient(
       0deg,
-      color.adjust($primary-color, $lightness: 5%) 0%,
-      color.adjust($secondary-color, $lightness: 5%) 100%
+      color.adjust($primary-color, $lightness: $button-ligthness) 0%,
+      color.adjust($secondary-color, $lightness: $button-ligthness) 100%
     );
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 
-    transition: opacity 500ms ease-in-out;
+    transition: opacity $button-transition-duration ease-in-out;
   }
 
   &:hover {

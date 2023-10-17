@@ -1,18 +1,4 @@
-.appear-animate {
-  opacity: 0;
-
-  animation-name: appear-animation;
-  animation-duration: $appear-duration;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
-}
-
-@for $i from 0 through 2 {
-  .delay-#{$i} {
-    animation-delay: $i * $appear-delay;
-  }
-}
-
+// Animation de l'apparition des menus
 @keyframes appear-animation {
   from {
     opacity: 0;
@@ -21,5 +7,42 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/***
+* Animation du loader
+***/
+
+// Afichage/Disparition du loader
+@keyframes loader-finish {
+  0% {
+    z-index: 99;
+  }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    z-index: 99;
+    opacity: 1;
+  }
+  100% {
+    z-index: -99;
+  }
+}
+
+// Animation des cercles dans le loader
+@keyframes dot-move {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 1;
+    transform: scale(0) rotate(360deg);
   }
 }

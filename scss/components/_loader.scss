@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:list";
 
 .loader {
   position: absolute;
@@ -12,9 +13,7 @@
   opacity: 0;
   background: rgba(255, 255, 255, 0.9);
 
-  animation-name: loader-finish;
-  animation-duration: $loader-duration;
-  animation-delay: 150ms;
+  animation: loader-finish $loader-duration ease-in-out $loader-delay both;
 
   .dot {
     position: absolute;
@@ -29,43 +28,16 @@
     backface-visibility: hidden;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 
-    animation-name: dot-move;
-    animation-timing-function: cubic-bezier(0.4, 0, 1, 0.8);
-    animation-iteration-count: infinite;
-    animation-duration: $loader-interval;
+    animation: dot-move $loader-interval cubic-bezier(0.4, 0, 1, 0.8) infinite;
 
     transform-origin: ($loader-radius * -1) center;
 
     @for $i from 1 through $loader-amount {
-      &:nth-child(#{$i}) {
-        background: nth($loader-colors, random(length($loader-colors)));
+      &-#{$i} {
+        background: nth($loader-colors, 1+ ($i % length($loader-colors)));
         animation-delay: math.div($i, $loader-amount) * $loader-interval * -1;
         opacity: 0;
       }
     }
-  }
-}
-
-@keyframes loader-finish {
-  from {
-    z-index: 99;
-    opacity: 1;
-  }
-  to {
-    z-index: 99;
-    opacity: 1;
-  }
-}
-
-@keyframes dot-move {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    z-index: 1;
-    transform: scale(0) rotate(360deg);
   }
 }
