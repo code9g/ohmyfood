@@ -147,10 +147,16 @@ h1 {
   max-width: 1080px;
 }
 .fonctioning .cards {
+  flex-direction: column;
   -moz-column-gap: 36px;
        column-gap: 36px;
   row-gap: 25px;
   padding-left: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .fonctioning .cards {
+    flex-direction: row;
+  }
 }
 .fonctioning .card {
   flex: auto;
@@ -310,9 +316,14 @@ h1 {
 }
 .restaurants .card {
   overflow: hidden;
-  max-width: 490px;
+  flex: 1 1 100%;
   background-color: #ffffff;
   border-radius: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants .card {
+    flex-basis: 40%;
+  }
 }
 .restaurants .card-img {
   aspect-ratio: 3/2;

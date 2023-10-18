@@ -17,8 +17,13 @@
 
   .card {
     overflow: hidden;
+    flex: 1 1 100%;
 
-    max-width: 490px;
+    //max-width: 490px;
+    @include respond-to("desktop") {
+      flex-basis: 40%;
+      //max-width: 490px;
+    }
 
     background-color: #ffffff;
     border-radius: 15px;
