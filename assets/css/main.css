@@ -356,6 +356,9 @@ h1 {
     padding: 30px 25px;
   }
 }
+.l-footer .brand {
+  text-align: left;
+}
 
 .footer-menu {
   display: flex;
@@ -380,7 +383,7 @@ h1 {
 }
 @media screen and (min-width: 1024px) {
   .footer-title {
-    padding-bottom: 8px;
+    padding-bottom: 0;
   }
 }
 

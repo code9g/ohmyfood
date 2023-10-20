@@ -14,6 +14,10 @@
       padding: 30px 25px;
     }
   }
+
+  .brand {
+    text-align: left;
+  }
 }
 
 .footer-menu {
@@ -39,6 +43,6 @@
   padding-bottom: 16px;
 
   @include respond-to("desktop") {
-    padding-bottom: 8px;
+    padding-bottom: 0;
   }
 }
