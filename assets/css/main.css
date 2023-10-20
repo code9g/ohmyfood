@@ -203,12 +203,12 @@ h1 {
 }
 .restaurant .restaurant-name {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   gap: 24px;
   width: 100%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .restaurant .restaurant-name {
     justify-content: center;
   }

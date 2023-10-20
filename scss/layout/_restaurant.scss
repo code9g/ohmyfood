@@ -38,12 +38,12 @@
 
   .restaurant-name {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     gap: 24px;
     width: 100%;
 
-    @include respond-to("desktop") {
+    @include respond-to("tablet") {
       justify-content: center;
     }
   }
