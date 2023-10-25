@@ -1,16 +1,16 @@
-.badge-new {
+.badge-new,
+.badge-n {
   position: absolute;
-
   user-select: none;
+}
 
-  padding: 7px 9px;
-  right: 15px;
-  top: 15px;
+.badge-new {
+  padding: 0.5em 0.7em;
 
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 0.875em;
   color: #008766;
-  border-radius: 2px;
+  border-radius: 0.2em;
   background-color: $tertiary-color;
 }
 
@@ -19,13 +19,12 @@
   align-items: center;
   justify-content: center;
 
-  user-select: none;
+  font-size: 0.75em;
 
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2em;
+  height: 2em;
 
-  font-size: 1.2rem;
+  border-radius: 50%;
   color: #ffffff;
   background-color: $primary-color;
-  border-radius: 50%;
 }

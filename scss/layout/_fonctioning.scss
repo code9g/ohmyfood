@@ -20,6 +20,10 @@
   .card {
     flex: auto;
 
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
     padding: 28px 35px;
 
     background-color: $primary-bg-color;
@@ -28,11 +32,11 @@
 
     .icon-text {
       width: 2 * $icon-text-size;
+      text-align: center;
     }
   }
 
   .badge-n {
-    position: absolute;
     left: 0;
     top: 50%;
     transform: translate(-50%, -50%);

@@ -160,6 +160,9 @@ h1 {
 }
 .fonctioning .card {
   flex: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   padding: 28px 35px;
   background-color: #f6f6f6;
   border-radius: 20px;
@@ -167,9 +170,9 @@ h1 {
 }
 .fonctioning .card .icon-text {
   width: 2em;
+  text-align: center;
 }
 .fonctioning .badge-n {
-  position: absolute;
   left: 0;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -340,6 +343,10 @@ h1 {
   justify-content: space-between;
   padding: 16px;
 }
+.restaurants .badge-new {
+  right: 15px;
+  top: 15px;
+}
 
 .l-footer {
   color: #ffffff;
@@ -390,21 +397,10 @@ h1 {
 
 .back-link {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 2.2rem;
   left: 0;
   top: 50%;
-  width: 4.4rem;
-  height: 4.4rem;
   transform: translate(0, -50%);
-  border-radius: 50%;
-  transition: all 300ms ease-in-out;
-}
-.back-link:hover {
-  background-color: #f6f6f6;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
 .btn-primary {
@@ -437,18 +433,20 @@ h1 {
   opacity: 1;
 }
 
-.badge-new {
+.badge-new,
+.badge-n {
   position: absolute;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  padding: 7px 9px;
-  right: 15px;
-  top: 15px;
+}
+
+.badge-new {
+  padding: 0.5em 0.7em;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 0.875em;
   color: #008766;
-  border-radius: 2px;
+  border-radius: 0.2em;
   background-color: #99e2d0;
 }
 
@@ -456,22 +454,19 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  width: 2.2rem;
-  height: 2.2rem;
-  font-size: 1.2rem;
+  font-size: 0.75em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
   color: #ffffff;
   background-color: #9356dc;
-  border-radius: 50%;
 }
 
 .favorite {
   position: relative;
   font-size: 2.2rem;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 1em;
+  height: 1em;
 }
 .favorite .favorite-check,
 .favorite .favorite-uncheck {
@@ -520,7 +515,7 @@ h1 {
      object-fit: cover;
 }
 
-.loader {
+x.loader {
   position: absolute;
   z-index: -99;
   top: 0;
@@ -531,7 +526,7 @@ h1 {
   background: rgba(255, 255, 255, 0.9);
   animation: loader-finish 3s ease-in-out 150ms both;
 }
-.loader .dot {
+x.loader .dot {
   position: absolute;
   width: 8vmin;
   height: 8vmin;
@@ -544,32 +539,32 @@ h1 {
   animation: dot-move 2s cubic-bezier(0.4, 0, 1, 0.8) infinite;
   transform-origin: -4vmin center;
 }
-.loader .dot-1 {
+x.loader .dot-1 {
   background: #ff79da;
   animation-delay: -0.3333333333s;
   opacity: 0;
 }
-.loader .dot-2 {
+x.loader .dot-2 {
   background: #99e2d0;
   animation-delay: -0.6666666667s;
   opacity: 0;
 }
-.loader .dot-3 {
+x.loader .dot-3 {
   background: #9356dc;
   animation-delay: -1s;
   opacity: 0;
 }
-.loader .dot-4 {
+x.loader .dot-4 {
   background: #ff79da;
   animation-delay: -1.3333333333s;
   opacity: 0;
 }
-.loader .dot-5 {
+x.loader .dot-5 {
   background: #99e2d0;
   animation-delay: -1.6666666667s;
   opacity: 0;
 }
-.loader .dot-6 {
+x.loader .dot-6 {
   background: #9356dc;
   animation-delay: -2s;
   opacity: 0;
