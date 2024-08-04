@@ -1,8 +1,23 @@
 # ohmyfood
 
-Troisième projet du parcours "**Développeur d'application - JavaScript React**" chez [OpenClassroom](https://openclassrooms.com/fr/).
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-L'objectif est d'intégrer une maquette (depuis Figma), puis de dynamiser une page web avec des animations en CSS.
+Projet 3 du parcours "**Développeur d'application - JavaScript React**" chez [OpenClassroom](https://openclassrooms.com/fr/).
+
+Dynamisez une page web avec des animations CSS
+
+![home](./images/home.png)
+
+# Description
+
+Vous avez intégré Ohmyfood en tant que développeur junior. Il s’agit d’une jeune startup qui voudrait s'imposer sur le marché de la restauration. Déjà présente à New-York, elle souhaite désormais faire sa place à Paris.
+
+# Objectifs
+
+- Intégrer une maquette (depuis Figma),
+- Dynamiser une page web avec des animations en CSS.
 
 ## Marque
 
@@ -149,3 +164,6 @@ Et lancez la page
 ```terminal
 index.html
 ```
+
+[![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)](<[http://](https://github.com/code9g/)>)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pierre-andre-henry/)
