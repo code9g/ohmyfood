@@ -515,7 +515,7 @@ h1 {
      object-fit: cover;
 }
 
-x.loader {
+.loader {
   position: absolute;
   z-index: -99;
   top: 0;
@@ -526,7 +526,7 @@ x.loader {
   background: rgba(255, 255, 255, 0.9);
   animation: loader-finish 3s ease-in-out 150ms both;
 }
-x.loader .dot {
+.loader .dot {
   position: absolute;
   width: 8vmin;
   height: 8vmin;
@@ -539,32 +539,32 @@ x.loader .dot {
   animation: dot-move 2s cubic-bezier(0.4, 0, 1, 0.8) infinite;
   transform-origin: -4vmin center;
 }
-x.loader .dot-1 {
+.loader .dot-1 {
   background: #ff79da;
   animation-delay: -0.3333333333s;
   opacity: 0;
 }
-x.loader .dot-2 {
+.loader .dot-2 {
   background: #99e2d0;
   animation-delay: -0.6666666667s;
   opacity: 0;
 }
-x.loader .dot-3 {
+.loader .dot-3 {
   background: #9356dc;
   animation-delay: -1s;
   opacity: 0;
 }
-x.loader .dot-4 {
+.loader .dot-4 {
   background: #ff79da;
   animation-delay: -1.3333333333s;
   opacity: 0;
 }
-x.loader .dot-5 {
+.loader .dot-5 {
   background: #99e2d0;
   animation-delay: -1.6666666667s;
   opacity: 0;
 }
-x.loader .dot-6 {
+.loader .dot-6 {
   background: #9356dc;
   animation-delay: -2s;
   opacity: 0;
